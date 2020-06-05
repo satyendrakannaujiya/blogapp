@@ -1,0 +1,19 @@
+<!-- <p [innerHTML]="test_blog"></p> -->
+<h4>Blogs</h4>
+<hr>
+<div class="blog-list" *ngIf="posts?.length > 0;else other_content">
+<mat-card *ngFor="let post of posts">
+    <mat-card-title color="primary">{{post?.title | titlecase }}</mat-card-title>
+    <mat-card-subtitle color="secondary">posted by {{post?.posted_by | lowercase}} , {{post?.createdAt | timeAgo}}</mat-card-subtitle>
+    <mat-card-subtitle class="description" color="primary">{{post?.description}}</mat-card-subtitle>
+   
+    <mat-card-content [innerHTML]="post?.blog">
+    </mat-card-content>
+    <mat-card-actions layout="row" layout-align="end center">
+       &nbsp; <a [routerLink]="['/blog',post._id]" class="btn btn-primary" style="cursor: pointer;">View</a>
+      </mat-card-actions>
+     
+</mat-card>
+</div>
+<ng-template #other_content>No article found</ng-template>
+    

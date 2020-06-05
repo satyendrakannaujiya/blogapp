@@ -1,0 +1,23 @@
+img{
+    height: 250px;
+    width: 250px;
+}
+
+.container{
+    display:flex;
+   
+}
+.content{
+    margin: 50px;
+    /* border: 2px solid black; */
+    word-wrap: break-word;
+}
+@media only screen and (max-width: 600px) {
+
+    .container{
+        display:flex;
+        flex-direction: column;
+        margin-top: 20px;
+       
+    }
+}

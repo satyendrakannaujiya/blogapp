@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~quill/dist/quill.snow.css";
+@import "~quill/dist/quill.core.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ql-syntax{
+    background: #4d2600 !important;
+    overflow: auto;
+    color: white !important;
+    padding: 10px !important;
+}
+
+img{
+    /* border-radius: 50%; */
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+

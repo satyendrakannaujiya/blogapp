@@ -1,0 +1,26 @@
+
+<mat-card>
+<mat-card-title color="primary">Admin</mat-card-title>
+<i>This is not for readers</i>
+<mat-card-content >
+  <div *ngIf="isError" class="alert alert-danger" role="alert">{{error_message}}</div>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter email id" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input matInput type='password' placeholder="Enter your password" [formControl]="password" required>
+        <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+</mat-card-content>
+<mat-card-footer>
+    <button mat-raised-button color="primary" [disabled]="getIsEnable()" (click)="login()">Login</button>
+    <!-- <a href="#">Forgot password ?</a> -->
+</mat-card-footer>
+</mat-card>

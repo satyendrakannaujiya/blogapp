@@ -1,0 +1,63 @@
+
+  mat-toolbar{
+      margin-bottom: 50px;
+  }
+  a:hover{
+        color: white;
+        text-decoration: none;
+  }
+  mat-select{
+      font-size: 15px !important;
+      font-weight: bold !important;
+      min-width: 100px;  
+}
+
+.menu-item-custom{
+    max-height: 200px !important;
+    overflow-y: auto;
+}
+.search-icon{
+     color: white;
+     margin-left: 5px;;
+}
+.app-toolbar{
+    position:fixed;
+    top: 0;
+    z-index: 1000;
+}
+main{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    min-height: 100%;
+    /* border: 10px solid black; */
+}
+app-footer{
+    /* border: 2px solid black !important; */
+    /* width: 50%; */
+    margin-top: auto;
+    /* bottom: 0; */
+    /* width: 100%; */
+}
+.morea:hover{
+    color: black;
+}
+#search-div{
+    /* border: 2px solid red; */
+
+    width: 100%;
+}
+@media only screen and (max-width: 600px) {
+    mat-toolbar-row{
+        min-width: 100%;
+        /* border: 2px solid black; */
+    }
+    #search-div{
+         /* border: 2px solid red; */
+         width: 100%;
+    }
+    mat-toolbar{
+        margin-bottom: 200px !important;
+    }
+  }

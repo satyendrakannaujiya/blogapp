@@ -1,0 +1,21 @@
+<div class="container1">
+
+<mat-card>
+    <mat-card-title color="primary">{{post?.title | titlecase}}</mat-card-title>
+    <mat-card-subtitle color="secondary">posted by {{post?.posted_by | lowercase}} , {{post?.createdAt | timeAgo}}</mat-card-subtitle>
+    <mat-card-subtitle color="primary">{{post?.description}}</mat-card-subtitle>
+            <mat-card-content [innerHTML]="post?.blog">
+            </mat-card-content>
+</mat-card>
+
+<div class="more-articles">
+        <ul>
+                <p>More articles</p>
+                <a mat-raised-button *ngFor="let item of posts" (click)="showArticle(item._id)">
+                    
+                        {{item?.title | titlecase}}
+                </a>
+        </ul>
+</div>
+
+</div>

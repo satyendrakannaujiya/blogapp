@@ -1,0 +1,29 @@
+p{
+    border: 2px solid black !important;
+    /* background-color: red; */
+}
+mat-card-content{
+    /* border: 2px solid black; */
+    height: 60px;
+    display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+mat-card{
+    margin: 10px;
+}
+h4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    margin-top: 20px;
+}
+
+
+mat-card-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

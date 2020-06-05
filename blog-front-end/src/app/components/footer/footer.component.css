@@ -1,0 +1,74 @@
+.copy-right{
+    background-color: blueviolet;
+    color: lightblue;
+
+}
+.copy-right a{
+    color: white;
+}
+footer{
+    /* margin-top: 50px; */
+    background-color: lightblue;
+}
+
+/* icons css
+ */
+ .social-media{
+     /* border:2px solid black; */
+     display: flex;
+     margin-bottom: 10px;
+     }
+
+ .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-github {
+    background: #021b2c9a;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-medium {
+    background: white;
+    color: black;
+  }
+
+  .link:hover{
+    color: blue;
+  }

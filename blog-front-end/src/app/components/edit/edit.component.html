@@ -1,0 +1,31 @@
+<div class="container1">
+    <div id="quill">
+        <h3 style="display: flex;flex-direction: row;justify-content: space-around;">Write Article</h3>
+        <form [formGroup]="editorForm" (ngSubmit)="onPublish()">
+            <input type="text" class="form-control" formControlName="title" placeholder="Title" required>
+            <br>
+            <input type="text" class="form-control" formControlName="description" placeholder="Description">
+           
+            <mat-form-field>
+                <mat-label>Topics</mat-label>
+                <mat-select formControlName="topics" multiple>
+                  <mat-option *ngFor="let topic of topics" [value]="topic.title">{{topic.title}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <br>
+        <quill-editor [styles]="editorStyle" formControlName="editor" placeholder="Enter Text" [modules]="config"
+            required>
+        </quill-editor>
+       <br><br>
+        <button class="btn btn-primary" style="float: right;margin: 5px;margin-bottom: 10px;" id="publish_btn">Update</button>
+    </form>
+
+    </div>
+    
+    <div class="output">
+        <p style="display: flex;flex-direction: row;justify-content: space-around;">Your article</p>
+        <hr>
+        <p [innerHTML]="editorContent"></p>
+    </div>
+    </div>
+    

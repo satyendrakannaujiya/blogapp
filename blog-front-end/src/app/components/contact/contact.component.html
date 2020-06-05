@@ -1,0 +1,17 @@
+<div class="container">
+
+<h3 style="display: flex;flex-direction: row;justify-content: space-around;">Contact Me</h3>
+<form [formGroup]="contactForm" (ngSubmit)="submit()">
+    <input type="text" class="form-control" formControlName="name" placeholder="Full name" required>
+    <br>
+    <input type="email" class="form-control" formControlName="email" placeholder="email">
+    <br>
+    <!-- <mat-form-field class="example-full-width"> -->
+        <!-- <mat-label>Message</mat-label> -->
+        <textarea formControlName="message" class="form-control" placeholder="Message ..."></textarea>
+    <!-- </mat-form-field> -->
+    <br>
+<button class="btn btn-primary" style="float: right;margin: 5px;margin-bottom: 10px;" id="publish_btn">Submit</button>
+</form>
+
+</div>

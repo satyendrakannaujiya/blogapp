@@ -1,0 +1,41 @@
+<mat-toolbar  color="primary"  class="fixed-header app-toolbar" style="display: flex;flex-direction: row;justify-content: space-between;flex-wrap: wrap;">
+    <mat-toolbar-row style="width: 70%;" class="tags">
+      <!-- <img src="assets/logo2.png" alt="not found" height="40px" width="40px"> -->
+    <span> <a  mat-button  routerLink="/home"><i class="material-icons md-18">home</i></a></span>
+    <!-- <span> <a  mat-button  routerLink="/home"> <img src="assets/logo2.png" alt="not found" height="40px" width="40px"></a></span> -->
+    <a  mat-button  *ngFor="let topic of topics | slice:0:limit;" [routerLink]="['/blog/tag',topic.title]">{{topic.title | uppercase}}</a>
+    <button mat-button [matMenuTriggerFor]="menu">MORE</button>
+    <mat-menu #menu="matMenu" class="customize">
+            <div class="menu-item-custom">
+                <a  mat-menu-item  class="morea" *ngFor="let topic of topics | slice:limit:topic_length;" [routerLink]="['/blog/tag',topic.title]">{{topic.title | uppercase}}</a>
+            </div>
+    </mat-menu>
+    </mat-toolbar-row>
+      <mat-toolbar-row style="width:30%;display: flex;flex-direction: row;justify-content: flex-end;">
+        <div id="search-div" style="display: flex;flex-direction: row;justify-content: flex-start;align-items: center;">
+          <input id="search" class="form-control form-control-sm ml-3 w-75" [(ngModel)]="text" type="search" placeholder="Search" aria-label="Search">
+        
+           <a id="search-icon" class="search-icon" [routerLink]="['/blog/search',text]">&nbsp;<i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- <div *ngIf="!isloggedin">
+        <a  mat-button  routerLink="/login">Login</a>
+        <a  mat-button  routerLink="/signup">Signup</a>
+       </div> -->
+       <div *ngIf="tokenService.isloggedin">
+        <a  mat-button  routerLink="/create"><i class="material-icons md-18">edit</i></a>
+        <a  mat-button  routerLink="/blog-list"><i class="material-icons md-18">build</i></a>
+        <mat-select [value]="tokenService.getPayload().username">
+          <mat-option [value]="tokenService.getPayload().username">{{tokenService.getPayload().username}}</mat-option>
+          <mat-option value="logout" (click)="logout()">Logout</mat-option>
+        </mat-select>
+    </div>
+  
+      </mat-toolbar-row>
+    </mat-toolbar>
+<main>
+    <router-outlet  style="margin-top: 80px;"></router-outlet>
+    <app-footer></app-footer>
+</main>
+
+<!-- <app-home></app-home> -->
