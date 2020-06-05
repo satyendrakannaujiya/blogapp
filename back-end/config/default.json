@@ -1,0 +1,12 @@
+{
+    "serverDetails":{
+        "ip":"localhost",
+        "port":"3000"
+    },
+    "dbDetails":{
+          "url":"mongodb://localhost:27017/blogapp"
+    },
+    "keys":{
+        "json_secret_key":"json_secret_key"
+    }
+}
